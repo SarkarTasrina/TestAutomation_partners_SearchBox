@@ -1,1 +1,2 @@
-﻿# TestAutomation_partners_SearchProduct
+﻿# TestAutomation_partners_SearchBox
+ 
