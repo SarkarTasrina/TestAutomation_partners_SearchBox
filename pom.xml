@@ -4,14 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+
     <groupId>com.partners</groupId>
     <artifactId>testPartners1</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <selenium.version>4.24.0</selenium.version>
-        <webdrivermanager.version>5.9.2</webdrivermanager.version>
         <cucumber.version>7.15.0</cucumber.version>
+        <selenium.version>4.19.1</selenium.version>
+        <webdrivermanager.version>5.8.0</webdrivermanager.version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
         <maven.compiler.source>21</maven.compiler.source>
@@ -48,8 +49,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven.compiler.plugin.version}</version>
                 <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
+                    <source>21</source>
+                    <target>21</target>
+                    <compilerArgs>--enable-preview</compilerArgs>
 
                 </configuration>
             </plugin>

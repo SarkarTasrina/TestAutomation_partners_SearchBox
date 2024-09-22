@@ -1,19 +1,22 @@
 
 package step_definitions;
 
+import base.Base;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import page.SearchPage;
 
-public class searchStep {
+public class SearchStep extends Base {
 
-    @Given("user can see the home page")
-    public void usercanseethehomepage() {
+    SearchPage searchPage = new SearchPage(driver);
+
+    @Given("I am in the homepage")
+    public void iAmInTheHomepage() {
+        searchPage.navigateUrl("https://partners.com.bd/");
     }
-    @When("user wants to be search a product user should be click on the search option")
-    public void userwantstobesearchaproductusershouldbeclickonthesearchoption() {
-    }
+
     @Then("write a product name user wants to be for search")
     public void writeaproductnameuserwantstobeforsearch() {
     }
@@ -24,8 +27,10 @@ public class searchStep {
     public void usercanseethesearchedproduct() {
     }
 
+
     @And("see the details of the product")
     public void seeTheDetailsOfTheProduct() {
     }
+
 
 }
